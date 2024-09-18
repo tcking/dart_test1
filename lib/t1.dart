@@ -9,9 +9,11 @@ main(){
   String nullableString2 = file.readAsStringSync();
 
   var function = nullableString2.toString;
-  function.hashCode;
 
-  print(Function.apply(function, null));
+  // nullableString2.hashCode; if call this first, it will make hashcode same
+
+  function.hashCode; // this will make hashcode change
+
 
   print(nullableString==nullableString2);
   print(nullableString.codeUnits);
